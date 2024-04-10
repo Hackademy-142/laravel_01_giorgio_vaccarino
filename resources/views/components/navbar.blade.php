@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/chi-siamo">Chi siamo</a>
+          <a class="nav-link" href="{{route('chi.siamo')}}">Chi siamo</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/i-nostri-valori">I nostri valori</a>
+          <a class="nav-link" href="{{route('valori')}}">I nostri valori</a>
         </li>
       </ul>
     </div>

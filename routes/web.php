@@ -1,22 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/chi-siamo', function () {
-    $arrayStudents = [
-        ['name'=>'Felice', 'surname'=>'Mastronzo'],
-        ['name'=>'Leon', 'surname'=>'Cino'],
-        ['name'=>'Perla', 'surname'=>'Madonna'],
-        ['name'=>'Felice', 'surname'=>'Della Sega'],
-        ['name'=>'Franco', 'surname'=>'Forte']
-    ];
-    return view('chi-siamo', ['students'=>$arrayStudents]);
-});
+Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
-Route::get('/i-nostri-valori', function () {
-    return view('i-nostri-valori');
-});
+Route::get('/chi-siamo', [PublicController::class, 'chiSiamo'])->name('chi.siamo');
+
+Route::get('/i-nostri-valori', [PublicController::class, 'valori'])->name('valori');
